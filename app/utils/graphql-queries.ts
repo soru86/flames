@@ -30,7 +30,7 @@ const getAnimationByIdQuery = gql`
 
 const getAnimationsByTitleQuery = gql`
   query getAnimationsByTitle($title: String!) {
-    getAnimationsByTitle(id: $title) {
+    getAnimationsByTitle(title: $title) {
       id
       title
       definition

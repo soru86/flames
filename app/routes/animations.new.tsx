@@ -8,6 +8,11 @@ export const action = async ({ request }: { request: Request }) => {
 
   const title = form.get("title");
   const definition = form.get("definition");
+
+  if (!definition) {
+    throw new Error("No JSON file selected. Please select file and try again.");
+  }
+
   const description = form.get("description");
   const dimension = form.get("dimension");
   const frameRate = parseInt(form.get("frameRate")?.toString() || "");
@@ -28,7 +33,12 @@ export const action = async ({ request }: { request: Request }) => {
     fileSize,
   };
 
-  await createAnimation(fields);
+  const status = await createAnimation(fields);
+
+  if (!status) {
+    throw new Error("Error creating new animation in store.");
+  }
+
   return redirect("/animations");
 };
 

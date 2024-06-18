@@ -37,7 +37,10 @@ function AnimationItem({ animation }: { animation: Animation }) {
             className="justify-self: end mr-5"
             onClick={() => handleDownload(animation.definition)}
           >
-            <RiDownload2Fill size={25} className="gray-800 justify-self: end" />
+            <RiDownload2Fill
+              size={25}
+              className="text-gray-800 justify-self: end"
+            />
           </button>
           <Link
             title="View Animation Details"
@@ -46,7 +49,7 @@ function AnimationItem({ animation }: { animation: Animation }) {
           >
             <RiInformationLine
               size={25}
-              className="gray-800 justify-self: end"
+              className="text-gray-800 justify-self: end"
             />
           </Link>
         </div>

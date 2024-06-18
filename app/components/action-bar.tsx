@@ -28,7 +28,7 @@ function ActionBar() {
         <button type="submit" title="Search Animation">
           <RiSearchLine
             size={25}
-            className="gray-800 mt-1 hover:cursor-pointer"
+            className="text-gray-800 mt-1 hover:cursor-pointer"
           />
         </button>
       </Form>

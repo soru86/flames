@@ -52,9 +52,13 @@ const findAnimationsByTitle = async (title: string) => {
 };
 
 const createAnimation = async (inputAnimation: InputAnimation) => {
-  await db.animation.create({
+  const animation = await db.animation.create({
     data: { ...inputAnimation },
   });
+
+  if (!animation) {
+    return false;
+  }
   return true;
 };
 
