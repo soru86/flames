@@ -6,7 +6,8 @@
     "**/.server/**/*.tsx",
     "**/.client/**/*.ts",
     "**/.client/**/*.tsx",
-    "index.d.ts"
+    "index.d.ts",
+    "app/utils/generate-vapi-keys.js"
   ],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],

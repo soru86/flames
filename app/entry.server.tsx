@@ -50,6 +50,7 @@ function handleBotRequest(
           const stream = createReadableStreamFromReadable(body);
 
           responseHeaders.set("Content-Type", "text/html");
+          responseHeaders.set("Content-Encoding", "gzip");
 
           resolve(
             new Response(stream, {
