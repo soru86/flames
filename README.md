@@ -50,7 +50,12 @@ To initialize the database with given schema, below command can be used from pro
 npx prisma init --data-source-provider sqlite
 ```
 
-Above command will create the blank database called `dev.db`.
+Above command will use SLQLite as data source provider.
+To create the blank database called `dev.db`, please use below command:
+
+```sh
+npx prisma db push
+```
 
 To seed the blank database with test cards, below command can be used from project root folder:
 

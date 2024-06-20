@@ -21,6 +21,8 @@ export const loader = async ({ request }: { request: Request }) => {
     animations = await queryAllAnimations();
   }
 
+  if (!animations) throw new Error("Animations not found!");
+
   return {
     animations,
   };

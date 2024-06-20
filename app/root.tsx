@@ -7,6 +7,7 @@ import {
   ScrollRestoration,
   useLocation,
   useMatches,
+  useRouteError,
 } from "@remix-run/react";
 import "./tailwind.css";
 import { useEffect } from "react";

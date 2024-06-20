@@ -32,7 +32,7 @@ export const action = async ({ request }: { request: Request }) => {
     totalFrames,
     fileSize,
   };
-
+  console.log(fields);
   const status = await createAnimation(fields);
 
   if (!status) {
